@@ -1,0 +1,245 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --yellow: #eef13f;
+  --orange: hsl(13, 99%, 60%);
+  --green: #80b238;
+  --blue: #80c1d6;
+}
+
+html {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/*===============================Debut de la NAV=======================*/
+
+body {
+  background-color: #80c1d6;
+}
+
+/*===========================La barre de la NAV======================= */
+
+nav {
+  background: #80b238;
+  opacity: 0.8;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  text-transform: uppercase;
+}
+
+nav a {
+  font-family: "Atma", cursive;
+  padding: 1.1rem;
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+  transition: transform 0.9s;
+}
+
+nav li:last-child a {
+  font-weight: bold;
+}
+
+nav li:nth-child(odd) a:hover {
+  transform: rotate(3deg) scale(1.5);
+}
+
+nav li:nth-child(even) a:hover {
+  transform: rotate(-3deg) scale(1.5);
+}
+
+/* =============================Fin de la NAV===========================*/
+
+/*==============================Debut du Header=========================*/
+
+header img {
+  display: inline-block;
+  margin: 5rem auto 5rem;
+}
+
+header {
+  background-image: url("/img/blue-splash.png");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 35rem;
+}
+
+.imgtripled {
+  width: 35rem;
+  height: 35rem;
+}
+
+h1 {
+  font-family: Bangers, sans-serif;
+  color: hsl(13, 99%, 60%);
+  font-size: 5rem !important;
+  text-shadow: 2px 2px white;
+  margin-bottom: 0;
+}
+
+/*=================================Fin du header========================*/
+
+/*=================================Debut du Main========================*/
+main {
+  height: 700px;
+  background-color: var(--blue);
+  box-shadow: 0 -5px 0px 0 #0d3951 opacity(-10%);
+}
+
+main h2 {
+  grid-template-columns: 1fr;
+  grid-column: 1 / span 1;
+  font-family: Bangers, sans-serif;
+  font-size: 3rem;
+  text-shadow: 2px 2px #0d3951;
+  color: white;
+  margin-bottom: 12px;
+  padding-top: 1em;
+}
+/*damier*/
+
+table {
+  display: inline-block;
+  margin: auto;
+  padding-bottom: 25px;
+  border-spacing: 0;
+  background: var(--blue);
+}
+td {
+  width: 0.85rem;
+  height: 1rem;
+}
+tr:nth-child(odd) td:nth-child(odd),
+tr:nth-child(even) td:nth-child(even) {
+  background-color: #eef13f !important;
+}
+
+/*fin du damier*/
+
+form {
+  margin: auto;
+  list-style: none;
+  max-width: 33rem;
+  grid-template-columns: 1fr 1fr; /*repeat(auto-fit, minmax(15rem, 1fr));*/
+  display: grid;
+  gap: 0.5rem;
+  grid-column: 1 / span 2;
+}
+input {
+  margin: auto;
+  border: red solid 2px;
+  border-radius: 0.5rem;
+  height: 3rem;
+  width: 17rem;
+  background: var(--orange);
+  color: white;
+}
+
+input:focus {
+  background-color: var(--yellow);
+  color: var(--orange);
+}
+
+main {
+  font-family: "Atma", cursive;
+  font-weight: bold;
+  color: white;
+  font-size: 1.1rem;
+  text-align: center;
+  padding: 5px;
+}
+
+button {
+  height: 10rem;
+  display: inline-block;
+  color: white;
+  font-weight: bold;
+  font-family: Bangers, sans-serif !important;
+  font-size: 1.7rem !important;
+  text-transform: uppercase !important;
+  text-shadow: 2px 2px #0c4213;
+  margin: auto;
+  left: 15rem;
+  grid-column: 1 / span 2;
+  border: none;
+  transform: rotate(-5deg);
+  background: url("img/submit_bg.png") center center no-repeat;
+  transition: 0.8s;
+}
+
+button:hover {
+  rotate: 5deg;
+  scale: 1.2;
+}
+
+footer {
+  position: relative;
+  font-family: Atma;
+  background: var(--yellow) !important;
+  bottom: 0px;
+  width: 100%;
+  padding-top: 50px;
+  color: black;
+  border-top: 0.5rem solid rgba(0, 0, 0, 0.06);
+  border-bottom: 0.5rem solid rgba(0, 0, 0, 0.06);
+}
+
+footer h2 {
+  text-shadow: 4px 3px 0 #a7a2a2;
+}
+
+footer .group-footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem 1rem;
+}
+
+footer h2,
+footer h3 {
+  text-align: center;
+  grid-column: 1 / span 2;
+  background: #eef13f;
+  padding: 1rem;
+  color: black;
+}
+
+footer p:first-of-type,
+address:first-of-type {
+  text-align: right;
+}
+
+footer p:last-of-type,
+address:last-of-type {
+  text-align: left;
+}
+
+.group-footer img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+  transform: translate3d(0, -50%, 0);
+}
+/*============================ Fin du Footer ==========================*/
